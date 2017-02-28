@@ -1,0 +1,29 @@
+{
+  "name": "kodilla-p-salonik",
+  "version": "1.0.0",
+  "description": "simple responsive website",
+  "main": "grundfile.js",
+  "scripts": {
+    "test": "kodilla-p-salonik"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agnieszkazm/p-salonik-website.git"
+  },
+  "keywords": [
+    "grunt"
+  ],
+  "author": "Agnieszka Zminkowska",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agnieszkazm/p-salonik-website/issues"
+  },
+  "homepage": "https://github.com/agnieszkazm/p-salonik-website#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0"
+  }
+}
