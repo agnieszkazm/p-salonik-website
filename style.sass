@@ -12,12 +12,10 @@ $margin-section: 30px
 * 
 	box-sizing: border-box
 
-.row
-	&:after
-		&:before 
-			content: ""
-			display: table
-			clear: both
+.row:after, .row:before 
+	content: ""
+	display: table
+	clear: both
 
 
 [class*="col-"] 
@@ -106,12 +104,12 @@ body
 
 
 .hero
-	background-image: url("img/hero.jpeg")
+	background-image: url("img/hero.jpg")
 	height: calc(100vh - 60px)
 	min-height: 300px
 	width: 100%
 	background-attachment: fixed
-	@extent .background-prop
+	@extend .background-prop
 
 .slogan
 	background-color: rgba(49, 50, 52,0.5)
@@ -131,18 +129,18 @@ body
 		text-shadow: 2px 2px 5px #fff
 
 .dog1
-	background-image: url("img/dog1.jpeg")
+	background-image: url("img/dog1.jpg")
 	margin-right: $gallery-margin
 
 .dog2
-	background-image: url("img/dog2.jpeg")
+	background-image: url("img/dog2.jpg")
 	margin-right: $gallery-margin
 
 .dog3
-	background-image: url("img/dog3.jpeg")
+	background-image: url("img/dog3.jpg")
 
 .offer
-	margin-top: margin-section
+	margin-top: $margin-section
 
 .offer
 	h1
@@ -152,79 +150,88 @@ body
 		position: relative
 		font-size: 30px
 .offer
-	h1:after
-		content: ""
-		position: absolute
-		left: 50%
-		bottom: 40%
-		height: 5px
-		width: 0px
-		background-color: $navbar-color
-		transform: translateX(-50%)
-		transition-duration: 2s
-		transition-property: width
+	h1
+		&:after
+			content: ""
+			position: absolute
+			left: 50%
+			bottom: 40%
+			height: 5px
+			width: 0px
+			background-color: $navbar-color
+			transform: translateX(-50%)
+			transition-duration: 2s
+			transition-property: width
 .offer
-	h1:hover:after
-			width: 180px
+	h1
+		&:hover
+			&:after
+				width: 180px
 .gallery
 	@extend .background-prop
-	position: relative;
+	position: relative
 
 .layer
 	height: 100%
 	width: 100%
 	text-align: center
-	line-height: 300px
+	line-height: 150px
 	color: transparent
 	background-color: transparent
-	transition: 2.0s
 	padding: 0
 	text-transform: uppercase
 	font-weight: bold
 
 .layer
-	p:nth-child(1)
-		color: #fff
-		font-size: 25px
-
-.layer:hover 
-		p:nth-child(2)
-			transition-delay: 0.2s
-			transform: scale(1.2)
-			transition-duration: 0.5s
+	p
+		&:nth-child(1)
+			color: #fff
+			font-size: 25px
 
 .layer
-	p:nth-child(3)
-		font-size: 25px
-		line-height: 30px
-		padding: 10px
-		display: inline-block
-		color: transparent
+	&:hover
+		p
+			&:nth-child(2)
+				transition-delay: 0.2s
+				transform: scale(1.2)
+				transition-duration: 0.5s
 
-.layer:hover
-	p:nth-child(3)
-		font-size: 30px
-		border: 2px solid $second-color
-		background-color: transparent
-		color: #fff
-		transition-delay: 0.4s
-		transform: scale(1.2)
-		transition-duration: 0.5s
+.layer
+	p
+		&:nth-child(3)
+			font-size: 25px
+			line-height: 30px
+			padding: 10px
+			display: inline-block
+			color: transparent
+
+.layer
+	&:hover
+		p
+			&:nth-child(3)
+				font-size: 30px
+				border: 2px solid $second-color
+				background-color: transparent
+				color: #fff
+				transition-delay: 0.4s
+				transform: scale(1.2)
+				transition-duration: 0.5s
 .layer
 	p
 		margin: 0
 
-.col-30offer:hover
-	.layer
-		background-color: rgba(0,0,0,0.5)
-		color: #fff
-		cursor: pointer
+.col-30offer
+	&:hover
+		.layer
+			background-color: rgba(0,0,0,0.5)
+			color: #fff
+			cursor: pointer
 .layer
 	h1
 		transition: 3s
 
 .directions
-	margin-top: margin-section
+	margin-top: $margin-section
 	text-align: center
 
 .directions
@@ -236,25 +243,28 @@ body
 		font-size: 30px
 
 .directions 
-	h1:after
-		content: ""
-		position: absolute
-		left: 50%
-		bottom: 40%
-		height: 5px
-		width: 0
-		background-color: $navbar-color
-		transform: translateX(-50%)
-		transition-duration: 2s
-		transition-property: width
+	h1
+		&:after
+			content: ""
+			position: absolute
+			left: 50%
+			bottom: 40%
+			height: 5px
+			width: 0
+			background-color: $navbar-color
+			transform: translateX(-50%)
+			transition-duration: 2s
+			transition-property: width
 
 .directions
-	h1:hover:after
-		width: 100px
+	h1
+		&:hover
+			&:after
+				width: 100px
 
 .directions
 	i
-		.fa
+		&.fa
 			border: 2px solid $second-color
 			height: 50px
 			width: 50px
@@ -389,18 +399,27 @@ input, label
 		padding: 0
 		text-transform: uppercase
 		font-weight: bold
-
+	.layer
+		p
+			&:nth-child(3)
+				font-size: 30px
+				border: 2px solid $second-color
+				background-color: transparent
+				color: #fff
+	
 	/*hamburger*/
 	label
 		display: block
 		
-	#menu-button:not(:checked)
-		~ul
-			display: none
+	#menu-button
+		&:not(:checked)
+			~ul
+				display: none
 
-	#menu-button:checked
-		~ul
-			display: block
+	#menu-button
+		&:checked
+			~ul
+				display: block
 		
 	.hamburger-toggle
 		cursor: pointer
