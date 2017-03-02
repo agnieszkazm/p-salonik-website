@@ -1,1 +1,1 @@
-Simple website (HTML, CSS, RWD)
+Simple website (HTML, CSS, RWD) https://agnieszkazm.github.io/p-salonik-website/
