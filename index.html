@@ -4,8 +4,9 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>p-salonik</title>
-	<link rel="stylesheet" type="text/css" href ="style.css">
+	<link rel="stylesheet" type="text/css" href ="css/style.css">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
 </head>
 <body>
 	<header class="header">
@@ -68,8 +69,9 @@
 		<div class="container">
 		 	<div class="row">
 		 		<div class="col-12">
-		 			<div class="col-8 col-m-12 col-s-12 map">
-		 		 		<img src="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&scale=2&zoom=13&size=600x300&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:red%7Clabel:Company%7C40.718217,-73.998284&key=AIzaSyCnC6YIM_Aup50dB6kLS-j9JA_tZdqg-Pc" alt="map">
+		 			<div class="col-8 col-m-12 col-s-12">
+		 		 		<!--<img src="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&scale=2&zoom=13&size=600x300&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:red%7Clabel:Company%7C40.718217,-73.998284&key=AIzaSyCnC6YIM_Aup50dB6kLS-j9JA_tZdqg-Pc" alt="map">-->
+		 		 		 <div id="mapid"></div>
 		 		 	</div>
 		 		 	<div class="col-4 col-m-12 col-s-12 adress">
 		 		 		<h1>kontakt</h1>
@@ -111,5 +113,7 @@
 				</div>
 			</div>
 	</footer>
+	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+	<script type="text/javascript" src="js/leaflet.js"></script>
 </body>
 </html>
