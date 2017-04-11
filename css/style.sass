@@ -4,7 +4,7 @@ $navbar-color: #A67D3D
 $second-color: #5F9F9F
 $gallery-margin: 5%
 $gallery-margin-medium: 2%
-$margin-section: 30px
+$margin-section: 60px
 .background-prop
 	background-size: cover
 	background-position: center
@@ -279,6 +279,77 @@ body
 
 .row-flex
 	margin: 20px
+.opinion
+	margin-top: $margin-section
+.opinion
+	h1
+		text-align: center
+		color: $navbar-color
+		padding-bottom: 30px
+		position: relative
+		font-size: 30px
+.opinion
+	h1
+		&:after
+			content: ""
+			position: absolute
+			left: 50%
+			bottom: 40%
+			height: 5px
+			width: 0px
+			background-color: $navbar-color
+			transform: translateX(-50%)
+			transition-duration: 2s
+			transition-property: width
+.opinion
+	h1
+		&:hover
+			&:after
+				width: 180px
+#carousel
+	margin-top: $margin-section
+	width: 1200px
+	height: 400px
+	margin: 0 auto
+	overflow: hidden 
+	border: 2px solid #fff
+	position: relative
+
+#carousel
+	img
+		width: 800px
+		height: 100%
+		float: right
+#carousel
+	ul
+		li
+			width: 1200px
+			height: 100%
+			float: left
+			position: relative
+
+#carousel
+	ul
+		height: 400px
+		width: 7200px
+		list-style-type: none
+		padding: 0
+		margin: 0
+
+#carousel
+	ul
+		li
+			p
+				position: absolute
+				top: 0
+				bottom: 0
+				right: 800px
+				text-align: right
+				font-size: 20px
+				padding: 20px
+				background-color: rgba(255,255,255,0.8)
+				margin: 0px
+
 .map
 	img
 		width: 100%
