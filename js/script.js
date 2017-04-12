@@ -21,7 +21,16 @@ $(document).ready(function(){
 		carouselList.css({marginLeft: 0});
 	}
 	function changeSlide(){
-		carouselList.animate({'marginLeft':-1200}, 800, moveFirstSlide);			
+		if(window.innerWidth > 768 && window.innerWidt < 1199) {
+			carouselList.animate({'marginLeft':-800}, 500, moveFirstSlide);
+
+		} else if(window.innerWidt > 1200) {
+			carouselList.animate({'marginLeft':-1200}, 800, moveFirstSlide);
+		}
+		else {
+			carouselList.animate({'marginLeft':-1200}, 800, moveFirstSlide);
+		}
+					
 	};
 	setInterval(changeSlide, 5000);
 
