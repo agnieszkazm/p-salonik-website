@@ -141,12 +141,12 @@ body {
   background-image: url("../img/dog3.jpg"); }
 
 .offer {
-  margin-top: 60px; }
+  margin-top: 150px; }
 
 .offer h1 {
   text-align: center;
   color: #A67D3D;
-  padding-bottom: 30px;
+  padding-bottom: 80px;
   position: relative;
   font-size: 30px; }
 
@@ -216,7 +216,7 @@ body {
   transition: 3s; }
 
 .directions {
-  margin-top: 60px;
+  margin-top: 150px;
   text-align: center; }
 
 .directions h1 {
@@ -253,12 +253,12 @@ body {
   margin: 20px; }
 
 .opinion {
-  margin-top: 60px; }
+  margin-top: 150px; }
 
 .opinion h1 {
   text-align: center;
   color: #A67D3D;
-  padding-bottom: 30px;
+  padding-bottom: 80px;
   position: relative;
   font-size: 30px; }
 
@@ -278,16 +278,16 @@ body {
   width: 180px; }
 
 #carousel {
-  margin-top: 60px;
+  margin-top: 150px;
   width: 1200px;
-  height: 400px;
+  height: 600px;
   margin: 0 auto;
   overflow: hidden;
   border: 2px solid #fff;
   position: relative; }
 
 #carousel img {
-  width: 800px;
+  width: 100%;
   height: 100%;
   float: right; }
 
@@ -298,22 +298,61 @@ body {
   position: relative; }
 
 #carousel ul {
-  height: 400px;
+  height: 600px;
   width: 7200px;
   list-style-type: none;
   padding: 0;
   margin: 0; }
 
 #carousel ul li p {
+  color: #bbb;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 800px;
-  text-align: right;
-  font-size: 20px;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
-  margin: 0px; }
+  top: 40%;
+  bottom: 60%;
+  margin: 40px;
+  height: 100px;
+  text-align: center;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 0px 20px 10px #575357;
+  -moz-box-shadow: 0px 0px 20px 10px #575357;
+  box-shadow: 0px 0px 20px 10px #575357; }
+
+.arrow {
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  text-shadow: 2px 2px 2px #000000; }
+
+.arrow p:nth-child(1) {
+  font-size: 40px;
+  color: #ebebe0;
+  position: absolute;
+  top: 100;
+  bottom: 0;
+  right: 70px;
+  left: 100;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 0px 20px 5px #575357;
+  -moz-box-shadow: 0px 0px 20px 5px #575357;
+  box-shadow: 0px 0px 20px 5px #575357; }
+
+.arrow p:nth-child(2) {
+  font-size: 40px;
+  color: #ebebe0;
+  position: absolute;
+  top: 100;
+  bottom: 0;
+  left: 100;
+  right: 10px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 0px 20px 5px #575357;
+  -moz-box-shadow: 0px 0px 20px 5px #575357;
+  box-shadow: 0px 0px 20px 5px #575357; }
 
 footer {
   background-color: #5F9F9F;
@@ -377,7 +416,9 @@ input, label {
     width: 100%; }
 
   #carousel ul li p {
-    right: 80%; } }
+    right: 0;
+    left: 0;
+    margin: 0; } }
 /*tablet */
 @media(max-width: 767px) {
   .col-1 {
@@ -541,6 +582,8 @@ input, label {
     width: 100%; }
 
   #carousel ul li p {
-    right: 80%; } }
+    right: 0;
+    left: 0;
+    margin: 0; } }
 
 /*# sourceMappingURL=style.css.map */
